@@ -1,0 +1,6 @@
+{
+  "name": "Dossier Maestro DUA-DIG (USAL) · Auditoría y Rediseño",
+  "description": "Dossier maestro de investigación, auditoría WCAG 2.2 y plataforma interactiva de rediseño para Recursos Digitales DUA-DIG de la Universidad de Salamanca (EduDIG).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,412 @@
+Recursos digitales y Diseño Universal para el Aprendizaje
+Auditoría crítica de contenidos, experiencia docente y accesibilidad
+Propuesta de modernización y plan de validación
+Universidad de Salamanca · Plataforma vinculada a EduDIG y DUA-DIG
+Fecha de consulta: 21 de octubre de 2026
+Documento de trabajo para revisión del equipo y del personal técnico
+Alcance: inspección pública mediante recuperación de texto y búsqueda web. No es una auditoría visual, técnica completa ni una certificación WCAG. Las maquetas son conceptuales; no constituyen cambios autorizados ni especificaciones definitivas.
+Convenciones de evidencia: A = hecho comprobado en el contenido recuperado; B = problema posible o hipótesis que necesita prueba; C = propuesta; D = información o prueba pendiente. La ausencia de un dato en el texto extraído no demuestra que falte en la página, una imagen, un archivo o un componente incrustado.
+Índice
+1. Veredicto ejecutivo
+2. Inventario de páginas y límites de la inspección
+3. Mapa de tareas del profesorado
+4. Auditoría por áreas
+5. Diez mejoras prioritarias: matriz de decisiones
+6. Arquitectura propuesta
+7. Maquetas conceptuales de cuatro pantallas
+8. Evaluación crítica de la gamificación
+9. Accesibilidad y diversidad cognitiva
+10. Implementación por niveles
+11. Plan de pruebas
+12. Preguntas para responsables y personal técnico
+
+ 1. Veredicto ejecutivo
+La prioridad no es convertir la web en una aplicación infantil ni sustituir su identidad universitaria. Es hacer más comprobable el recorrido «encontrar → decidir → preparar → utilizar → recuperar». La plataforma ya comunica su orientación a Infantil y Primaria, identifica EduDIG y DUA-DIG y ofrece entradas por formatos y por tres principios DUA. Estos activos deben conservarse. [web:8][web:24][web:25]
+El principal hallazgo de esta inspección es una limitación de verificabilidad: en varias fichas recuperamos títulos y rótulos como «FICHA DIDÁCTICA», pero no el contenido didáctico ni los destinos de descarga. No podemos concluir que esos datos no existan. Sí podemos justificar una revisión prioritaria de cómo se exponen en HTML y de qué puede averiguar un docente antes de abrir un material. [web:27][web:38][web:55]
+Recomendación ejecutiva: empezar por un piloto editorial con tres fichas reales —Participación ciudadana en línea, GiraTIC e Identidad Digital— y un índice de recursos mejor descrito. Revisar permisos, evidencias y accesibilidad antes de plantear buscador, filtros, cuentas o cambios de plantilla. No hay evidencia suficiente para recomendar una migración ni para declarar que el sistema actual carece de búsqueda.
+La gamificación no es una necesidad demostrada. Una guía de inicio y una lista de preparación sin premios son una respuesta más directa al trabajo del profesorado. La decisión visual debe favorecer lectura y selección, no permanencia ni clics. El éxito del proyecto web se medirá por tareas resueltas y comprensión de requisitos, no por supuestos efectos de aprendizaje derivados de visitas.
+Decisiones que pueden tomarse y decisiones que deben esperar
+Ahora: propuesta de bajo riesgo	Después de verificar
+Inventariar fichas, documentos y destinos; redactar resúmenes; corregir rótulos; preparar una maqueta.	Buscador, filtros, favoritos, cambio de navegación global o plantilla.
+Acordar campos de metadatos y responsables de cada dato.	Afirmar conformidad WCAG, eficacia didáctica, licencia abierta o idoneidad por etapa.
+Preparar un guion de pruebas y seleccionar tareas reales.	Eliminar secciones, alterar identidad institucional o cambiar idiomas sin revisión.
+2. Inventario de páginas y límites de la inspección
+Muestra intencional, no estadística: se seleccionaron páginas de orientación, organización, formatos distintos y complejidad diferente. La infografía representa un material gráfico; GiraTIC añade instrucciones; el vídeo presenta una ficha multipartita; Ciencias de la Naturaleza reúne múltiples actividades. Se incluyó una ruta en inglés para comprobar un posible desvío lingüístico. No es un censo del catálogo.
+Página / función	URL inspeccionada	Evidencia y límite
+Portada	https://recursosdigitalesdua.usal.es/	Presentación y público Infantil/Primaria; pie con aviso legal y cookies. Texto recuperado; no posición visual ni menú completo. [web:8]
+Presentación alternativa	https://recursosdigitalesdua.usal.es/inicio/	Resultado de búsqueda con bienvenida similar. No se ha probado si hay redirección, duplicidad técnica o equivalencia completa. [web:34]
+Proyecto y equipo	https://recursosdigitalesdua.usal.es/quienes-somos/	EduDIG; Facultad; dirección e investigadores DUA-DIG. No se comprueban financiación contractual ni vigencia del equipo. [web:25]
+Catálogo	https://recursosdigitalesdua.usal.es/recursos/	13 etiquetas de formato y tres entradas por principios DUA. Búsqueda, filtros y funcionamiento no verificables en esta extracción. [web:24]
+Categoría	https://recursosdigitalesdua.usal.es/juegos-de-mesa/	Seis nombres: CREATIC, IDENTIDAD DIGITAL, INTERNAUTAS RELATORES, GIRATIC, ROBOT ART, ROSCO TIC. No se inspecciona el comportamiento de sus tarjetas. [web:35]
+Agrupación temática	https://recursosdigitalesdua.usal.es/webquest-ciencias-de-la-naturaleza/	16 títulos, desde LOS ALIMENTOS hasta LOS DINOSAURIOS. No se obtienen las URL de los materiales externos. [web:37]
+Ficha gráfica	https://recursosdigitalesdua.usal.es/infografia-participacion-ciudadana-en-linea/	Título y FICHA DIDÁCTICA; contenido de la ficha no recuperado. [web:27]
+Ficha de juego	https://recursosdigitalesdua.usal.es/juego-giratic/	Título, FICHA DIDÁCTICA e INSTRUCCIONES; destinos y contenido no recuperados. [web:55]
+Ficha audiovisual	https://recursosdigitalesdua.usal.es/video-identidad-digital/	FICHA DIDÁCTICA 1, PARTE 2 y FICHA DIDÁTICA PARTE 3; este último rótulo tiene errata en la extracción. [web:38]
+Orientación DUA	https://recursosdigitalesdua.usal.es/dua-2/	Explicación general de representación, expresión y compromiso; referencia externa CAST. [web:31]
+Blog	https://recursosdigitalesdua.usal.es/blog-2/	Presentación y anuncio de próximas publicaciones; no se recupera listado de entradas. No demuestra que no haya publicaciones. [web:26]
+Ruta lingüística	https://recursosdigitalesdua.usal.es/en/webquest-educacion-fisica-y-juegos/	Mensaje «Sorry, this entry is only available in Español». No se prueba que el usuario llegue desde el menú vigente. [web:36]
+Enlace externo	https://www.cast.org/	Destino mencionado por DUA; página de CAST recuperada y referencia actual a directrices en español. No se abrió el enlace mediante la interfaz de la web. [web:31][web:51]
+Funciones y materiales no resueltos
+Herramientas DUA: se verifican sus tres entradas en Recursos, pero no sus páginas de destino ni las herramientas que contienen. La recuperación de la ruta tentativa /herramientas-dua/ falló: no se considera URL oficial, ausencia de sección ni enlace roto. También falló la recuperación de /sitemap.xml; esto no permite deducir el estado del sitio. Se necesita HTML de Recursos con sus href o una grabación de las tres rutas. [web:24]
+Descargas: se identifican rótulos de ficha e instrucciones, no archivos ni URL finales. No se han descargado ni evaluado PDF, vídeos, audios o paquetes. Se necesitan los enlaces directos y una copia de los archivos publicados, incluida su versión. No se afirma que los enlaces fallen ni que los documentos sean inaccesibles. [web:27][web:38][web:55]
+No se inspeccionaron DOM completo, CSS, árbol de accesibilidad, sesión con teclado, lector de pantalla, capturas, móvil real, tableta, cookies, formularios, analítica ni rendimiento. Tampoco panel, gestor, plantilla, permisos, extensiones, alojamiento o registros. La extracción de texto no sustituye estas pruebas.
+Paquete mínimo de evidencia adicional
+Solicitar: capturas de portada, Recursos, Juegos de mesa y tres fichas en escritorio, móvil y tableta; grabación del menú, búsqueda si existe, tres rutas de herramientas y descarga; HTML renderizado con enlaces y controles; documentos originales y publicados; prueba Tab/Mayús+Tab/Enter/Escape; recorrido con lector de pantalla; resultados de ampliación y reflujo; relación de permisos y entorno de pruebas. Cada captura o grabación debe indicar URL, fecha, navegador, tamaño de ventana y estado de sesión.
+3. Mapa de tareas del profesorado
+Tarea docente	Punto de partida real	Qué debe poder decidir	Prueba / estado
+Comprender la oferta	Portada y Quiénes somos	Para profesorado de Infantil/Primaria; materiales y herramientas, no solo información del proyecto.	A: público explícito. B: rapidez de comprensión pendiente. [web:8][web:25]
+Encontrar un recurso	Recursos → formato → categoría	Seleccionar sin conocer previamente el nombre comercial.	A: entradas por formato. D: funcionamiento de búsqueda. [web:24]
+Valorar pertinencia	GiraTIC o Participación ciudadana	Objetivo, etapa y necesidades de participación.	D: contenido completo de ficha. [web:27][web:55]
+Preparar la sesión	GiraTIC → instrucciones	Materiales, tiempo, reglas y requisitos.	A: rótulo INSTRUCCIONES; D: contenido. [web:55]
+Adaptar y reutilizar	Ficha + original	Alternativas de acceso, archivo editable y licencia.	D: derechos y formatos; no inferir adaptación por acceso gratuito.
+Abrir o descargar	Identidad Digital y fichas	Qué parte abre, formato, proveedor, cuenta y salida.	A: tres rótulos de ficha; D: destinos. [web:38]
+Regresar y recuperar	Ficha → categoría → catálogo	Conservar contexto y volver en otra visita.	D: migas, historial, estado y URL estable.
+Evaluar confianza	Quiénes somos + Blog + ficha	Separar recomendación, experiencia y resultado empírico.	A: proyecto identificado y blog introductorio; D: publicaciones y evidencia de cada material. [web:25][web:26]
+4. Auditoría por áreas
+A. Arquitectura de la información
+A. Recursos distingue «RECURSOS DUA PARA DESARROLLAR LA COMPETENCIA DIGITAL» y «HERRAMIENTAS PARA APLICAR EL DUA». Las entradas del primer bloque se organizan por Animaciones, Cuentos, Cuestionarios interactivos, Infografías, Juegos de mesa, Juegos de rol, Juegos digitales, Presentaciones, Revistas digitales, Sitios Web, Vídeos didácticos, WebQuest y Podcast. El segundo ofrece tres principios DUA. [web:24]
+B. El formato ayuda cuando ya se busca un vídeo o un juego, pero puede obligar a explorar varias rutas cuando la necesidad inicial es «trabajar identidad digital». El nombre IDENTIDAD DIGITAL aparece en Juegos de mesa y también hay una ficha Vídeo: Identidad Digital; esto sugiere una oportunidad de conexión temática, no duplicidad errónea. Debe probarse si el profesorado entiende «WebQuest» y si distingue herramienta de actividad lista para el aula. [web:35][web:38]
+C. Mantener formatos y añadir primero descripciones y referencias cruzadas de temas verificados. Ejemplo: «Vídeos didácticos — materiales audiovisuales; consulta en cada ficha su duración, preparación y alternativas». Crear una entrada editorial «Cómo empezar» sin exigir una taxonomía nueva. Conectar el juego y el vídeo sobre identidad digital solo tras confirmar contenido, etapa y objetivo con sus responsables.
+D. Obtener mapa del menú vigente, enlaces reales, resultados de búsqueda y filtros si los hubiera, corpus completo y campos disponibles. No añadir facetas por etapa, objetivo o competencia hasta conocer completitud, consistencia y cobertura; comprobar vacíos y posibles clasificaciones contradictorias. Si ya hay filtros, probar primero su comprensión y sus resultados.
+A. Quiénes somos empieza por el grupo y detalla después el proyecto; Blog ofrece una presentación general. B. Puede costar distinguir quién investiga, qué ofrece el catálogo y qué se ha evaluado. C. Reordenar Quiénes somos con anclas «La plataforma», «Proyecto DUA-DIG», «Equipo y grupo», «Financiación y publicaciones», sin retirar información obligatoria. D. Validar contenido institucional, menú y publicaciones. [web:25][web:26]
+B. Interfaz y jerarquía visual
+A. Solo se dispone de jerarquías textuales extraídas y rótulos; no de medidas visuales. B. No procede afirmar que la tipografía sea pequeña, que haya poco contraste, excesiva densidad, mala adaptación o tarjetas defectuosas. C. Prototipar encabezado compacto, título claro, acción principal y metadatos visibles; contrastarlo con el diseño actual. D. Capturas, estilos calculados y sesiones reales para cada dispositivo.
+Dirección visual propuesta, no diagnóstico: fondo sencillo, texto oscuro, un acento institucional autorizado, espacios entre bloques y componentes repetibles. La inspiración en claridad y consistencia asociadas a Apple es una preferencia de diseño, no una prueba científica. No copiar identidad, iconografía protegida ni patrones comerciales. El catálogo debe alcanzarse antes de largos textos institucionales; la información institucional seguirá accesible y completa.
+En Juegos de mesa, proponer una lista o tarjetas sobrias donde CREATIC, GIRATIC y los demás títulos se acompañen de una frase descriptiva verificada y del enlace «Ver ficha de GiraTIC». No inventar el objetivo por el nombre. En WebQuest Ciencias de la Naturaleza, probar subagrupaciones editoriales de los 16 títulos únicamente tras revisar el contenido; permitir listado textual completo para no ocultar recursos en carruseles. [web:35][web:37]
+Para el prototipo: texto base alrededor de 18 px y ancho de lectura de aproximadamente 60–75 caracteres como hipótesis ajustable; títulos con escala coherente y enlaces subrayados. Estos números no certifican accesibilidad ni son una prescripción para dislexia. Usar botones para acciones y enlaces para destinos. Evitar tarjetas con enlaces anidados y acciones solo al pasar el ratón. Verificar semántica, espaciado y reflujo según WCAG. [web:11]
+C. Accesibilidad y diversidad cognitiva
+A. La extracción de Identidad Digital incluye «Skip to Main Content». Esto solo acredita la existencia del texto recuperado, no que el enlace sea visible con foco ni que funcione. En las fichas la extracción no aporta descripción del contenido. B. Puede haber problemas de exposición semántica o dependerse de imágenes o incrustaciones; también puede ser una limitación del extractor. C. Publicar una síntesis HTML equivalente y evaluar el componente real. D. DOM, árbol de accesibilidad y pruebas manuales. [web:38][web:27][web:55]
+Adoptar WCAG 2.2 A/AA como objetivo técnico propuesto, acordándolo con la unidad competente; no afirmar que sea por sí solo la determinación de todas las obligaciones institucionales. La norma exige evaluación de páginas completas y procesos completos, no únicamente la portada. La guía COGA amplía la orientación cognitiva y no es requisito de conformidad WCAG. [web:11][web:9][web:23]
+La tabla del apartado 9 convierte los criterios en pruebas concretas. No se propone una barra de accesibilidad como solución. Automatización, inspección del código y evaluación humana tienen funciones complementarias; no hay resultados de conformidad disponibles en esta revisión. [web:11]
+D. Calidad de fichas y materiales
+A. Participación ciudadana muestra el rótulo de ficha; GiraTIC añade instrucciones; el vídeo divide la ficha en tres partes. B. El docente podría necesitar abrir varios documentos para decidir si el material encaja; todavía no se ha demostrado esta carga. C. Añadir resumen de decisión en HTML y presentar todos los archivos con nombres y relación explícita. D. Revisar fichas y originales antes de trasladar datos o reorganizar archivos. [web:27][web:55][web:38]
+Campo propuesto	Estado en esta inspección	Quién debe proporcionarlo o validarlo
+Objetivo, contenido y competencia	No recuperados en fichas; no inferirlos del título.	Autoría del recurso y responsable didáctico.
+Etapa, destinatarios y contexto	La plataforma declara Infantil/Primaria; no implica que cada material sirva para ambas.	Autoría y docentes que conozcan su aplicación.
+Duración y preparación	No recuperadas; distinguir estimación de registro observado.	Autoría; docentes colaboradores para tiempos contextualizados.
+Dispositivos, materiales, conexión y cuentas	No verificados; separar requisitos para docente y alumnado.	Editor técnico y autoría, probando los destinos.
+Instrucciones y secuencia	GiraTIC tiene rótulo; falta revisar contenido.	Autoría, con revisión editorial. [web:55]
+Acceso y participación	No verificados; no usar un sello «DUA» como sustituto.	Especialista en accesibilidad y responsable pedagógico.
+Autoría, procedencia y licencia	La pertenencia al sitio no acredita derechos de cada pieza.	Titular de derechos y responsable institucional.
+Fecha, versión y mantenimiento	No inferir versión del año del pie o fecha del buscador.	Gestor editorial con historial y autoría.
+Evidencia disponible	No se ha verificado evaluación de estos materiales.	Equipo investigador: estudio, muestra, contexto, método y límites.
+Contrato editorial: cada campo tendrá valor, fuente, responsable y fecha de revisión en el inventario interno. «Pendiente de confirmar» en este informe no debe convertirse automáticamente en una etiqueta pública; el equipo decidirá cómo comunicar incertidumbres útiles. No publicar una duración aproximada sin responsable ni una licencia elegida por el editor si los derechos no lo permiten.
+E. Confianza y coherencia universitaria
+A. Quiénes somos atribuye la plataforma a DUA-DIG, identifica dirección e investigadores y describe EduDIG. La portada y Blog incluyen referencias a aviso legal y cookies en el texto recuperado. B. La extracción no prueba que esas páginas estén completas o accesibles. C. Conservar identidad y créditos; revisar avisos con la unidad competente y añadir responsables y revisión editorial donde sea útil. D. Financiación y logotipos exigibles, políticas vigentes, contacto y plan de continuidad. [web:25][web:8][web:26]
+A. Portada usa «garantizar el acceso» y menciona «estilos de aprendizaje»; Blog llama al enfoque «revolucionario». B. Puede interpretarse como promesa universal o como adaptación a categorías estables. C. Sustituir por lenguaje operativo: «Recursos y orientaciones para identificar barreras y ofrecer distintas formas de acceso, participación y expresión. Revisa la adecuación a tu aula». Es una propuesta editorial prudente, no una evaluación de eficacia de DUA-DIG. La caracterización del DUA como marco de diseño es coherente con CAST. D. Revisión científica del equipo y referencia a la versión de las directrices que utiliza. [web:8][web:26][web:51]
+Para Blog y fichas: etiquetar «Orientación docente», «Experiencia de aula» o «Resultado de investigación», definiendo criterios internos. Una experiencia debe indicar contexto y límites; un resultado debe enlazar método y fuente. No asociar automáticamente a todos los recursos las publicaciones generales del grupo. No crear testimonios, porcentajes de éxito, sellos de validación o etiquetas «evaluado» sin trazabilidad.
+5. Diez mejoras prioritarias: matriz de decisiones
+Priorización cualitativa: P1 = desbloquea decisión, preparación o evidencia básica con riesgo acotado; P2 = navegación o gobernanza que requiere validación; P3 = función estructural condicionada. El orden combina impacto esperado, confianza de la evidencia, esfuerzo, riesgo y mantenimiento. No se atribuyen puntuaciones numéricas ficticias. Las diez mejoras son candidatas: las basadas en una limitación de extracción necesitan contraste antes de aplicarse.
+Para mantener la legibilidad, la matriz solicitada se presenta transpuesta: cada mejora incluye los nueve campos completos. A/B/C/D conservan el significado definido en portada.
+1. Resumen HTML de decisión
+Campo de decisión	Contenido
+Página o elemento	Fichas: Participación ciudadana, GiraTIC, Identidad Digital
+Evidencia observada	A: rótulos de ficha sin cuerpo didáctico recuperable. [web:27][web:55][web:38]
+Problema o hipótesis	B: información potencialmente encerrada en archivos; no demostrado. D: revisar originales y DOM.
+Cambio propuesto	C: resumen HTML con objetivo, etapa, preparación y requisitos confirmados; conservar original.
+Tarea que facilita	Decidir pertinencia antes de abrir; preparar el uso.
+Riesgo	Transcribir con errores o desincronizar versiones.
+Permisos/dependencias	Edición autorizada, autoría y revisión didáctica; responsable de sincronización.
+Prioridad	P1 · impacto alto esperado; evidencia parcial; esfuerzo medio; mantenimiento medio.
+Forma de verificarlo	Comparar ficha y original; preguntar a docentes objetivo, preparación y requisitos sin abrir archivos.
+2. Hacer identificables las tres partes
+Campo de decisión	Contenido
+Página o elemento	Vídeo: Identidad Digital
+Evidencia observada	A: tres rótulos, uno «DIDÁTICA». [web:38]
+Problema o hipótesis	B: relación y propósito de las partes poco informativos en texto. D: contenido y destinos.
+Cambio propuesto	C: corregir errata y nombrar cada parte por su función real; indicar orden y formato una vez comprobados.
+Tarea que facilita	Abrir la parte correcta y comprender la secuencia.
+Riesgo	Asignar nombres erróneos o alterar enlaces.
+Permisos/dependencias	Permiso editorial y verificación de las tres piezas.
+Prioridad	P1 · evidencia directa para rótulo; esfuerzo bajo.
+Forma de verificarlo	Abrir cada enlace en pruebas y pedir identificar qué se obtiene en cada parte.
+3. Hacer operativo el acceso al catálogo
+Campo de decisión	Contenido
+Página o elemento	Portada
+Evidencia observada	A: texto de bienvenida centrado en oferta y aspiraciones. [web:8]
+Problema o hipótesis	B: acceso principal y posición no verificables. D: captura y navegación.
+Cambio propuesto	C: probar texto breve para docentes y acceso «Explorar recursos», si el actual no resuelve la tarea.
+Tarea que facilita	Comprender la web e iniciar búsqueda.
+Riesgo	Duplicar una acción ya visible o desplazar créditos.
+Permisos/dependencias	Permiso de edición; revisión institucional del texto.
+Prioridad	P1 · beneficio probable; esfuerzo bajo; hipótesis visual.
+Forma de verificarlo	Prueba de primer clic y paráfrasis de público y oferta en actual y maqueta.
+4. Explicar títulos de juegos
+Campo de decisión	Contenido
+Página o elemento	Juegos de mesa
+Evidencia observada	A: seis títulos con nombres diversos. [web:35]
+Problema o hipótesis	B: nombres como CREATIC o GIRATIC podrían no informar objetivo. D: fichas y pruebas.
+Cambio propuesto	C: frase descriptiva y «Ver ficha de…»; etapa solo si confirmada.
+Tarea que facilita	Seleccionar candidato sin ensayo de muchos enlaces.
+Riesgo	Inventar contenidos o sobrecargar tarjetas.
+Permisos/dependencias	Autoría para descripciones; editor para incorporarlas.
+Prioridad	P1 · esfuerzo bajo-medio; evidencia del nombre, no del fallo.
+Forma de verificarlo	Elegir recurso a partir de una necesidad sin adivinar; registrar dudas y aperturas innecesarias.
+5. Inventario de archivos y destinos
+Campo de decisión	Contenido
+Página o elemento	Fichas y WebQuest Ciencias de la Naturaleza
+Evidencia observada	A: fichas e instrucciones; 16 títulos de WebQuest. [web:55][web:37]
+Problema o hipótesis	B: requisitos o salidas externas desconocidos. D: href, cuentas y archivos.
+Cambio propuesto	C: registro URL-origen-destino-formato-cuenta-licencia-fecha; mostrar al docente datos relevantes confirmados.
+Tarea que facilita	Abrir, descargar y reutilizar con conocimiento.
+Riesgo	Enlaces caducados, acceso de menores o datos de terceros.
+Permisos/dependencias	Responsable técnico, autoría, revisión de privacidad si procede.
+Prioridad	P1 · dependencia básica; esfuerzo medio; mantenimiento recurrente.
+Forma de verificarlo	Abrir todos los destinos de la muestra; comprobar requisitos en sesión sin cuenta.
+6. Diferenciar tipos de evidencia
+Campo de decisión	Contenido
+Página o elemento	Blog, DUA y fichas
+Evidencia observada	A: Blog introductorio; DUA explicativo; sin estudios específicos recuperados. [web:26][web:31]
+Problema o hipótesis	B: recomendaciones podrían confundirse con resultados. D: publicaciones reales.
+Cambio propuesto	C: categorías editoriales y referencias; evitar promesas universales y corregir tono promocional.
+Tarea que facilita	Juzgar qué respalda una recomendación.
+Riesgo	Etiquetas que exageren validación o atribuyan estudios ajenos.
+Permisos/dependencias	Responsable científico y editor; reglas de revisión.
+Prioridad	P1 · rigor alto; esfuerzo bajo-medio.
+Forma de verificarlo	Docentes distinguen experiencia, orientación y resultado; equipo verifica cada atribución.
+7. Aclarar plataforma, proyecto y equipo
+Campo de decisión	Contenido
+Página o elemento	Quiénes somos
+Evidencia observada	A: grupo primero y proyecto después; dirección identificada. [web:25]
+Problema o hipótesis	B: relación institucional puede requerir lectura extensa. D: prueba de comprensión.
+Cambio propuesto	C: resumen inicial de relación y anclas; conservar contenido y financiación obligatoria.
+Tarea que facilita	Identificar autoría y responsables.
+Riesgo	Omitir créditos o usar una identidad no autorizada.
+Permisos/dependencias	Dirección del proyecto y normas de identidad; datos vigentes.
+Prioridad	P2 · esfuerzo bajo; riesgo institucional moderado.
+Forma de verificarlo	Localizar quién promueve, dirige y mantiene; validar institucionalmente.
+8. Guía breve y preparación
+Campo de decisión	Contenido
+Página o elemento	Nueva guía enlazada desde Recursos y fichas
+Evidencia observada	A: GiraTIC distingue ficha e instrucciones. [web:55]
+Problema o hipótesis	B: se desconoce si existe orientación equivalente. D: mapa completo.
+Cambio propuesto	C: guía «Cómo empezar» y lista imprimible, evitando duplicar una ayuda existente.
+Tarea que facilita	Preparar y retomar una selección.
+Riesgo	Ayuda demasiado larga o instrucciones paralelas desactualizadas.
+Permisos/dependencias	Edición autorizada y revisión didáctica.
+Prioridad	P2 · esfuerzo bajo-medio; mantenimiento bajo si enlaza originales.
+Forma de verificarlo	Completar preparación con y sin guía; observar consultas y errores.
+9. Mantener contexto y revisar idiomas
+Campo de decisión	Contenido
+Página o elemento	Categorías, fichas y ruta /en/
+Evidencia observada	A: ruta inglesa muestra que solo hay versión española. [web:36]
+Problema o hipótesis	B: posible desorientación; no se ha probado ruta desde menú ni retroceso. D: historial y selector.
+Cambio propuesto	C: probar migas y retorno a categoría; si hay filtros, conservar estado; revisar aviso y enlace a versión disponible.
+Tarea que facilita	Volver al catálogo y reencontrar el material.
+Riesgo	Enlaces duplicados, cambios SEO o promesa de traducción inexistente.
+Permisos/dependencias	Editor y técnico según sistema; coordinación de idiomas y URL.
+Prioridad	P2 · coste variable; no implica migración.
+Forma de verificarlo	Recorrer ida, vuelta e idioma; comprobar historial y reapertura en otra visita.
+10. Resolver descubrimiento tras revisar metadatos
+Campo de decisión	Contenido
+Página o elemento	Recursos: búsqueda y eventual filtrado
+Evidencia observada	A: 13 formatos y tres principios; funciones de búsqueda no verificadas. [web:24]
+Problema o hipótesis	B: búsquedas por etapa u objetivo podrían ser difíciles. D: sistema existente y datos.
+Cambio propuesto	C: probar primero lo existente; si hace falta, piloto de índice temático y después facetas mantenibles.
+Tarea que facilita	Encontrar por necesidad docente sin conocer formato.
+Riesgo	Resultados vacíos, etiquetado falso, deuda de mantenimiento.
+Permisos/dependencias	Permisos técnicos, inventario, taxonomía validada y cobertura suficiente; aprobación de coste.
+Prioridad	P3 condicionada · impacto potencial alto, incertidumbre y mantenimiento altos.
+Forma de verificarlo	Consultas reales; relevancia de resultados y cobertura; no activar facetas con datos insuficientes.
+6. Arquitectura propuesta
+Propuesta de navegación, no descripción del menú actual. Antes de implementarla se hará inventario y comparación de rutas para conservar URL útiles y evitar duplicaciones.
+Inicio
+├─ Recursos
+│  ├─ Todos los recursos / índice editorial inicial
+│  ├─ Por formato: conservar las 13 entradas comprobadas
+│  └─ Fichas individuales y enlaces a materiales
+├─ DUA en el aula
+│  ├─ Cómo empezar
+│  ├─ Qué es el DUA: revisar y aprovechar /dua-2/
+│  └─ Herramientas por los tres principios: verificar destinos existentes
+├─ Proyecto y equipo: aprovechar /quienes-somos/
+├─ Blog: orientaciones, experiencias y resultados, si existen contenidos
+└─ Contacto y ayuda: verificar apartado y canal autorizado
+Pie: identidad, financiación exigible, avisos, privacidad, cookies y accesibilidad según revisión institucional.
+Mantener dos entidades relacionadas, no intercambiables: recurso didáctico = actividad/material con propósito e instrucciones; herramienta = aplicación o servicio que puede apoyar distintas actividades. El registro de herramienta debe añadir proveedor, coste o modalidad comprobada, cuentas, datos tratados, accesibilidad conocida, alternativas y fecha de comprobación. Una herramienta no es «DUA» por sí sola: describir qué barrera ayuda a abordar y en qué condiciones. Esta concreción es una propuesta coherente con el enfoque de diseño de CAST, no una validación de las herramientas actuales. [web:51]
+Etapa, objetivo, competencia y situación de aula se tratarán primero como campos del inventario. Después de revisar datos y búsquedas reales se decidirá qué entrada aporta valor. No crear menús paralelos para todos los ejes. Para competencia digital, el equipo debe indicar el marco y criterio de codificación; no asignar códigos por intuición. Si un material sirve a varias etapas, explicar condiciones en lugar de marcar todas.
+7. Maquetas conceptuales de cuatro pantallas
+Las siguientes pantallas usan exclusivamente nombres comprobados y campos pendientes entre corchetes. Los botones son ejemplos de interfaz futura: no se afirma que existan. No hay testimonios, cifras, sellos ni datos didácticos inventados.
+Pantalla 1. Portada
+ESQUEMA
+[Identidad USAL autorizada + título de la plataforma]
+[Navegación convencional]
+H1 Recursos digitales para una enseñanza inclusiva
+«Materiales y orientaciones para profesorado de Educación Infantil y Primaria. Consulta qué trabaja cada recurso, cómo prepararlo y sus condiciones de uso».
+[Explorar recursos]   [Cómo empezar]
+Dos entradas: «Materiales para el aula» / «Herramientas para diseñar y adaptar»
+«¿Buscas un formato?» → enlaces a los formatos existentes
+«Sobre esta plataforma» → resumen breve DUA-DIG / EduDIG + [Proyecto y equipo]
+[Blog: solo entradas reales seleccionadas, con tipo y fecha verificados]
+[Pie institucional completo]
+Primero: público, oferta y catálogo, sin una ilustración infantil dominante. Al ampliar: explicación DUA y relación institucional en sus páginas, no información esencial escondida en acordeones. En móvil: una columna, dos acciones apiladas, menú convencional con etiqueta; no carruseles. Accesibilidad: título y regiones semánticas, salto al contenido, enlaces descriptivos, foco y contraste medidos. Pendiente: identidad autorizada, menú actual, componentes disponibles y captura para comprobar qué ya funciona. [web:11]
+Pantalla 2. Catálogo
+ESQUEMA
+Miga: Inicio > Recursos
+H1 Recursos para el aula
+«Explora los materiales por formato. Consulta en la ficha su adecuación a tu grupo».
+[Cómo elegir un recurso]
+[Buscador existente, si está verificado y es útil; no simularlo si no está disponible]
+Bloque «Por formato» → 13 entradas actuales
+Listado de ejemplo con recursos reales:
+• Infografía: Participación ciudadana en línea
+  [Descripción, destinatarios y requisitos: pendientes de validar]
+  [Ver ficha de Participación ciudadana en línea]
+• Juego: GiraTIC
+  [Descripción y etapa: pendientes de validar]
+  [Ver ficha de GiraTIC]
+• Vídeo: Identidad Digital
+  [Descripción y duración: pendientes de validar]
+  [Ver ficha de Identidad Digital]
+[Herramientas para aplicar el DUA: bloque diferenciado]
+[Pie]
+Los tres títulos están comprobados; su reunión en un catálogo general es propuesta, no listado actual recuperado. [web:27][web:55][web:38]
+Primero: alcance y entradas, después resultados o índice. Al ampliar: ficha completa, no ventanas emergentes que impidan compartir URL. Filtros por etapa u objetivo solo tras la decisión del apartado 5; si existen, mostrar selección activa, «Quitar filtro» y «Limpiar», estado en URL cuando sea viable y mensaje útil sin resultados. No mostrar un recuento ficticio.
+En móvil: lista vertical, sin bandas horizontales de formatos obligatorias; si hay filtros reales, panel accesible con resumen de selección y retorno claro al listado. Accesibilidad: formulario etiquetado, orden de foco coherente, resultados identificables y avisos de actualización si son dinámicos, sin anunciar toda la página repetidamente. Pendiente: corpus completo, reglas de orden, campos verificados y capacidad técnica. [web:11]
+Pantalla 3. Ficha de recurso
+ESQUEMA APLICADO A GIRATIC
+Inicio > Recursos > Juegos de mesa > GiraTIC
+H1 Juego: GiraTIC
+[Objetivo y descripción breve: aportará la autoría]
+Resumen visible:
+• Etapa / destinatarios: [por confirmar]
+• Qué trabaja: [por confirmar]
+• Duración: [estimación con contexto y fuente]
+• Materiales, dispositivos y cuentas: [por comprobar]
+• Condiciones de uso / licencia: [por confirmar]
+[Ver el recurso: destino por comprobar]
+[Consultar instrucciones: destino por comprobar]
+H2 Preparación y uso → pasos revisados
+H2 Opciones de acceso y participación → alternativas verificadas y límites
+H2 Archivos → nombre, función, formato, tamaño comprobado y versión
+H2 Autoría, procedencia y licencia
+H2 Evidencia disponible → tipo y fuente, o estado revisado por equipo
+H2 Historial y mantenimiento → fecha de revisión real
+[Volver a Juegos de mesa] [Volver a Recursos]
+[Enlace permanente de la ficha; opción de copia solo si se implementa]
+A: GiraTIC tiene rótulos de ficha e instrucciones; no se conoce su contenido. Todo valor entre corchetes debe completarse con una fuente, no publicarse como hecho. [web:55]
+Primero: objetivo, destinatarios, requisitos, condiciones de uso y acción; no ocultar información que determine si puede utilizarse. Al ampliar: instrucciones detalladas, historial y documentos complementarios; una sección desplegable debe seguir operable y comprensible sin ratón. Si la licencia no se ha verificado, no ofrecer «Descargar y adaptar» como promesa.
+En móvil: resumen y acciones antes del detalle; evitar barra fija que tape contenido o foco. Si el material externo requiere escritorio, indicarlo solo después de comprobarlo y ofrecer preparación alternativa cuando exista. Accesibilidad: HTML como primera capa, lista de pasos, nombres de archivos comprensibles, alternativas al contenido visual y prueba del destino. Pendiente: originales, derechos, versiones, responsable pedagógico y requisitos técnicos. [web:11]
+Pantalla 4. Guía «Cómo empezar»
+ESQUEMA
+Inicio > DUA en el aula > Cómo empezar
+H1 Cómo elegir y preparar un recurso
+«Una guía para decidir qué encaja en tu aula. Puedes entrar directamente en cualquier paso».
+Índice enlazado:
+1. Define el objetivo y las barreras de tu actividad.
+2. Explora un formato y revisa una ficha.
+3. Comprueba preparación, acceso y derechos.
+4. Abre el material y prueba las acciones esenciales.
+5. Conserva el enlace para recuperarlo.
+Bloque práctico: [Explorar Juegos de mesa] [Consultar GiraTIC]
+Lista sin puntuación:
+□ Entiendo qué objetivo trabaja.
+□ He comprobado destinatarios, materiales y cuentas.
+□ Conozco alternativas de acceso y participación disponibles.
+□ He revisado las condiciones de uso.
+□ He probado el material y conservo su enlace.
+[Versión imprimible, solo si se produce y revisa]
+[Volver al catálogo] [Contacto de ayuda autorizado]
+Los pasos no certifican inclusión ni sustituyen el juicio docente. Primero se ve la finalidad y un índice; después cada paso con explicación y enlaces. Ampliación: ejemplo real documentado, sin inventar una aplicación exitosa. Móvil: índice y secciones en una columna, casillas grandes y con etiquetas si son interactivas. Accesibilidad: no exigir completar pasos; anclas y encabezados; funcionamiento íntegro sin guardar progreso. Pendiente: comprobar ayuda existente, canal de soporte, revisión pedagógica y viabilidad de impresión. [web:11][web:23]
+8. Evaluación crítica de la gamificación
+Veredicto: no incorporar puntos, rachas, clasificaciones ni recompensas por clics. No se ha identificado una necesidad que requiera gamificación. Una secuencia guiada o lista de preparación puede ser simplemente buena orientación; no es necesario presentarla como juego. Las propuestas siguientes son hipótesis de utilidad, no efectos empíricos demostrados.
+Propuesta opcional	Necesidad / tarea / beneficio esperado	Riesgos, datos y mantenimiento	Alternativa y validación
+«Encuentra tu primer recurso»	Facilitar la primera selección con un recorrido abandonable. Beneficio esperado: menos indecisión.	Infantilización o más pasos. Sin cuenta ni datos personales; progreso efímero, si existe. Mantener enlaces y textos.	Guía lineal sin progreso. Comparar selección correcta, dudas y abandono voluntario; retirar si añade carga.
+Lista de preparación	Evitar olvidar requisitos antes de usar GiraTIC o un vídeo. Beneficio esperado: preparación más completa.	Falsa sensación de aptitud; no garantiza accesibilidad. Sin datos ni cuenta en papel o sesión; coste editorial bajo.	Lista imprimible sin casillas digitales. Verificar requisitos recordados y errores en preparación.
+Recorrido por un principio DUA	Conectar una barrera concreta con opciones de representación, acción o implicación.	Simplificar el marco o etiquetar herramientas sin justificación. Sin cuenta; mantenimiento científico medio.	Artículo con ejemplos revisados. Pedir justificar una elección y sus límites, no contar pantallas vistas.
+Colección de recursos	Retomar selección entre visitas, solo si docentes lo necesitan.	Persistencia fallida, dispositivos compartidos, privacidad y soporte. Guardado local exige explicación y revisión de almacenamiento; cuenta remota eleva coste y aprobación.	Marcador del navegador, URL permanente o lista personal externa. Probar recuperación posterior y comprensión del lugar donde se guarda.
+A. Orientar al profesorado en la web no equivale a B. gamificar una actividad del alumnado. El catálogo ya incluye juegos de mesa y digitales como formatos, pero esta inspección no evalúa sus reglas, recompensas ni efectos. Para un juego de aula habrá que revisar objetivo, participación, alternativas a la competición, accesibilidad de reglas, feedback y evidencia de aprendizaje del propio material. [web:24][web:35]
+Criterio de abandono: no desarrollar la función si una ayuda estática resuelve igual o mejor la tarea, si exige más datos de los necesarios o si no hay responsable de mantenimiento. La preferencia por una interfaz entretenida se registrará por separado de la comprensión, la preparación y el uso correcto.
+9. Accesibilidad y diversidad cognitiva
+Pruebas WCAG concretas: sin dictamen de cumplimiento
+Todos los criterios de la tabla se toman de WCAG 2.2; los estados actuales son «pendiente de evaluación», salvo los rótulos textuales ya descritos. A/AA identifican el nivel del criterio, no el nivel conseguido por el sitio. [web:11]
+Elemento y criterio	Prueba necesaria	Aceptación / cautela
+Fichas e imágenes: 1.1.1 A; 1.4.5 AA	DOM, alternativas textuales y comparación con infografía original.	Alternativa equivalente; si es infografía compleja, explicación extensa en HTML, no solo «imagen».
+Estructura: 1.3.1 y 1.3.2 A; títulos 2.4.2 A y 2.4.6 AA	Inspección de encabezados, regiones, listas, orden DOM y lector de pantalla.	Jerarquía y secuencia comprensibles; extracción con H1 no prueba semántica completa.
+Contraste: 1.4.3 AA; 1.4.11 AA; color 1.4.1 A	Medir colores reales y estados normal, foco y selección.	Texto 4,5:1, grande 3:1, y componentes/información gráfica aplicable 3:1, atendiendo a excepciones; no evaluar con intuición.
+Ampliación: 1.4.4 AA, 1.4.10 AA, 1.4.12 AA	Texto al 200 %; reflujo a equivalente de 320 px CSS; anulación de espaciados.	Sin pérdida de contenido o función; no exigir desplazamiento en dos dimensiones salvo excepciones aplicables. Espaciado de prueba no equivale a estilo obligatorio.
+Teclado: 2.1.1 y 2.1.2 A; foco 2.4.3 A, 2.4.7 AA y 2.4.11 AA	Recorrer menú, enlaces, descargas, filtros y desplegables con teclado.	Operables sin trampa; orden coherente, foco visible y no completamente oculto por contenido del autor.
+Enlaces y controles: 2.4.4 A, 2.5.3 A, 2.5.8 AA	Revisar propósito contextual, nombre visible/accesible y tamaño/separación real.	No depender de icono ambiguo; objetivos táctiles 24×24 CSS px o excepción aplicable. No declarar que todo botón debe medir eso sin considerar excepciones.
+Móvil y orientación: 1.3.4 AA; 1.4.10 AA	Teléfono y tableta, ambas orientaciones, zoom y teclado externo cuando proceda.	Sin restricción de orientación innecesaria; contenido y acciones disponibles.
+Vídeo y audio: 1.2.1 A, 1.2.2 A, 1.2.3 A y 1.2.5 AA	Abrir archivos/reproductores; contrastar subtítulos, transcripción y contenido visual significativo.	Determinar alternativa según tipo de medio; transcripción sola no sustituye siempre subtítulos o audiodescripción.
+Formularios: 3.3.1 y 3.3.2 A; 4.1.2 A, 4.1.3 AA	Etiquetas, errores, estados, lector de pantalla y anuncio de resultados.	Nombre, función y valor correctos; mensajes comprensibles, sin mover foco inesperadamente.
+Orientación: 2.4.1 A; 3.2.3 y 3.2.4 AA; idioma 3.1.1 A / 3.1.2 AA	Probar salto al contenido, consistencia y marcado de idioma en rutas españolas/inglesas.	No basta con que aparezca «Skip to Main Content» en la extracción; comprobar acción real.
+Documentos descargables: revisar texto seleccionable, idioma, títulos, etiquetas estructurales, lectura, enlaces, tablas, formularios y equivalencia de información. Registrar herramienta y prueba manual. No sustituir automáticamente una infografía por OCR sin revisión; el reconocimiento puede alterar contenido. Preferir fuente editable accesible y una síntesis HTML. No se certifica ningún archivo porque ninguno se ha obtenido.
+Dislexia, atención y autorregulación: qué tipo de afirmación hacemos
+Recomendación de accesibilidad: propósito claro, etiquetas familiares, instrucciones por pasos, orientación persistente y contenido legible. Son pautas de COGA para reducir barreras, no tratamiento de TDAH o dislexia ni promesa de aprendizaje. COGA propone incluir a personas con discapacidad cognitiva o del aprendizaje en investigación y diseño. [web:23][web:16]
+Evidencia empírica: Kuster y colaboradores no encontraron ventajas de Dyslexie frente a fuentes convencionales en velocidad o precisión en sus experimentos con población infantil. Esto no permite concluir que toda elección tipográfica sea irrelevante ni extrapolar sin más a profesorado adulto. Sí desaconseja imponer una fuente «para dislexia» como solución demostrada. Preferencia y rendimiento se deben medir por separado. [web:39]
+Preferencia individual: algunas personas pueden preferir un tamaño, espaciado o fondo. Priorizar compatibilidad con ajustes del navegador y del sistema; opciones adicionales solo si son útiles, accesibles y mantenibles. No asociar color o modo a un diagnóstico ni exigir que la persona revele su condición para activarlo. [web:11]
+Hipótesis a probar: resumen seguido de detalle, acciones explícitas, ausencia de animaciones decorativas, conservación del contexto y enlace permanente pueden facilitar retomar la tarea. Probarlo con docentes de experiencias y necesidades diversas, sin suponer un perfil único de TDAH. No usar tiempo de permanencia, absorción o hiperfoco como evidencia de comprensión. En esta revisión no se ha realizado una síntesis empírica específica de intervenciones web para TDAH: no se atribuyen efectos clínicos o universales.
+No reducir cognición a brevedad: un objetivo explicado, un ejemplo o una advertencia pueden requerir más texto. La propuesta separa una capa de decisión de una capa de explicación completa; no elimina contenido necesario para preparar y adaptar. Respetar la lectura lineal y la búsqueda directa. [web:23]
+10. Implementación por niveles
+Nivel	Entregables y alcance	Permisos / dependencias	Aprobación y mantenimiento
+1. Editorial y bajo riesgo	Inventario; rótulos corregidos; resumen de tres fichas; revisión de textos de portada, Quiénes somos y Blog; enlaces con propósito.	Rol de edición confirmado; acceso a originales; autoría y licencias verificadas. Bajo riesgo no significa libre de aprobación.	Equipo científico/editorial valida; conservar copias anteriores. Cada recurso tiene responsable y revisión al cambiar fuente o destino.
+2. Interfaz y navegación	Maquetas; tarjetas/listas; jerarquía; accesos; retorno a categoría; ajustes de estilos compatibles con sistema.	Inventario del gestor real y componentes; permisos de diseño o técnico; entorno de pruebas; identidad institucional.	Responsable web y técnico autorizan; probar regresión de páginas y dispositivos. Documentar componentes y evitar estilos aislados difíciles de mantener.
+3. Estructural	Buscador/facetas si faltan o fallan; modelo de datos; colecciones; cuentas solo si necesidad justifica coste; plantilla únicamente si hay barrera demostrada.	Modelo y calidad de datos, desarrollo, seguridad, accesibilidad, privacidad, presupuesto, soporte y continuidad.	Dirección y unidades competentes aprueban. No instalar extensiones ni migrar por iniciativa unilateral. Evaluar actualizaciones, reversión y coste a largo plazo.
+Secuencia segura de trabajo
+1. Mandato y permisos: acordar qué puede editarse, quién publica y quién responde de incidencias. Registrar arquitectura y versiones del sistema con apoyo técnico, no por impresión visual.
+2. Línea base: guardar inventario, contenidos y enlaces actuales; capturar tareas del diseño vigente. No copiar datos personales innecesarios.
+3. Maqueta: documento o prototipo no público con tres fichas y cuatro pantallas; revisión científica e institucional.
+4. Piloto editorial: preparar cambios en borrador o entorno de pruebas autorizado. Si no existe, no experimentar en producción; limitarse a prototipo hasta disponer de un procedimiento seguro.
+5. Validación: contenidos, derechos, privacidad, accesibilidad y tareas con docentes; corrección de defectos.
+6. Publicación controlada: solo tras aprobación, con copia recuperable del estado anterior, lista de cambios y persona que verifique enlaces.
+7. Reversión: restaurar versión anterior ante pérdida de acceso, errores de contenido, derechos o función; el técnico define método, responsables y límites.
+8. Seguimiento: revisar tras actualizaciones y cambios de proveedor; programar revisión editorial con frecuencia ajustada a recursos y riesgo.
+Continuidad: el proyecto debe decidir quién mantiene el catálogo tras el contrato o la financiación. Documentar campos, taxonomías, decisiones y procedimiento de alta/baja. No crear una función dependiente de una sola persona. Estimar esfuerzo después de contar recursos y conocer sistema; no prometer calendario o presupuesto sin esa información.
+11. Plan de pruebas
+Diseño de evaluación
+Primera fase: completar inspección técnica y observar tareas del sitio actual. Segunda fase: probar prototipo con el mismo objetivo y materiales equivalentes. Una maqueta de texto permite evaluar comprensión y arquitectura, pero no tiempos de descarga reales, rendimiento, lector de pantalla de la implementación o comportamiento móvil final. Tercera fase: confirmar el entorno de pruebas con procesos completos antes de publicar. [web:11]
+Participantes: profesorado de Infantil y Primaria con distinta experiencia digital y familiaridad con DUA; incluir personas con necesidades de acceso y participación, sin diagnóstico obligatorio. Determinar reclutamiento y tamaño por diversidad de tareas, perfiles, barreras y decisiones que aún permanecen inciertas. No fijar un número universal ni afirmar saturación sin justificarla. Hacer iteraciones y explicar qué perfiles y contextos no se cubrieron. [web:16]
+Tarea realista	Criterio de éxito / información que debe comprobarse	Registro
+Comprende qué ofrece la web y para quién	Describe materiales y herramientas y distingue docente usuario de alumnado destinatario.	Paráfrasis, dudas y primer destino elegido.
+Busca un recurso de su etapa para trabajar un objetivo	Primero el equipo verifica qué recurso satisface el escenario; después se formula sin dar el nombre o formato. Si no existe, reconocerlo es éxito legítimo.	Pertinencia, estrategia, resultados vacíos y decisiones erróneas.
+Localiza GiraTIC y explica cómo prepararlo	Obtiene materiales, requisitos e instrucciones del original validado; no inventa lo que falta.	Aperturas, retrocesos, ayuda requerida, comprensión. [web:55]
+Decide si puede adaptar Participación ciudadana	Identifica licencia y alternativas reales, o detecta que faltan datos para decidir.	Distinguir adaptación pedagógica y permiso jurídico; falsa seguridad. [web:27]
+Abre la parte pertinente de Identidad Digital	Se define la parte correcta tras revisar los documentos; localiza destino sin confusión.	Errores de parte, descarga, proveedor y requisitos. [web:38]
+Regresa al catálogo y a la categoría	No pierde orientación; si hay selección/filtro, se evalúa su conservación.	Estado perdido, uso de historial, pasos redundantes.
+Recupera el recurso en otra visita	Usa enlace, marcador o mecanismo disponible y comprende dónde se guardó.	Olvidos, fallo de persistencia y esfuerzo; intervalo coherente con el uso docente.
+Distingue recomendación y resultado	Explica qué se sabe y qué no de la evidencia publicada.	Atribuciones erróneas y lectura de etiquetas.
+Antes de cada sesión preparar una clave de referencia: fuente del objetivo, etapa, requisitos, licencia y resultado esperado. La clave debe admitir «no se puede determinar» cuando el contenido realmente no lo permita. No penalizar al participante por fallos del catálogo ni inventar una respuesta correcta para completar una prueba.
+Métricas e interpretación
+Éxito: independiente / con ayuda / parcial / no completado, con definición por tarea. Errores: elección inadecuada, descarga equivocada, requisito omitido, interpretación falsa de licencia o eficacia. Dudas: verbalizaciones, solicitudes de aclaración y decisiones pospuestas. Pasos innecesarios: desvíos sin utilidad para la tarea, no cualquier clic adicional. Tiempo: inicio/fin definidos, pausas y apoyos anotados; interpretar según estrategia, lectura y tecnología de apoyo, no penalizar lectura más lenta.
+Comprensión: pedir explicar qué trabaja, cómo se prepara, qué opciones ofrece y qué límites tiene; puntuar contra la fuente validada. Accesibilidad: documentar barrera, criterio pertinente, navegador, ayuda técnica y reproducción. Preferencias y carga percibida: preguntas iguales tras cada tarea y entrevista breve; recoger lo que gusta sin confundirlo con desempeño. Registrar problemas críticos aunque afecten a un solo participante; no ocultarlos en promedios.
+Comparación actual/propuesta: usar tareas equivalentes y contrabalancear el orden cuando el diseño y reclutamiento lo permitan; evitar repetir la misma búsqueda con memoria del nombre. Mantener condiciones comparables. Si las personas difieren, describir diferencias y no atribuir causalidad automática. Presentar resultados por tarea y perfil de acceso, casos de fallo y límites. No prometer mejoras porcentuales.
+Privacidad y ética: consentimiento claro para observación/grabación, minimización, acceso restringido y borrado acordado con la unidad responsable. No solicitar datos clínicos salvo necesidad justificada y procedimiento autorizado. Si se quiere convertir la evaluación de servicio en investigación publicable, determinar antes protocolo, permisos y revisión ética aplicable. No inferir aprendizaje del alumnado a partir de visitas, descargas o preferencias del profesorado.
+Criterios de decisión y plantilla de registro
+Desplegar únicamente cuando contenidos y derechos estén aprobados, las tareas esenciales puedan completarse, no se hayan introducido barreras de acceso bloqueantes y exista responsable de mantenimiento. Priorizar por gravedad, alcance y recuperación; definir con el equipo qué bloquea la publicación. Si una función no mejora la tarea o perjudica accesibilidad, simplificarla o retirarla. Evaluar aprendizaje del alumnado exigiría un estudio separado con medidas pertinentes, no analítica web.
+Registro	Campos mínimos
+Sesión	Código no identificativo, fecha, perfil de tarea, dispositivo, navegador y apoyos declarados voluntariamente.
+Por tarea	Versión del sitio, escenario, éxito, ayuda, errores, dudas, secuencia, tiempo contextualizado y explicación del participante.
+Incidencia	Página, reproducción, evidencia, gravedad, criterio o necesidad, propuesta, responsable y nueva prueba.
+Decisión	Mantener / corregir / retirar / investigar; motivo, incertidumbre, aprobación y fecha.
+12. Preguntas para responsables y personal técnico
+Para dirección del proyecto y equipo científico
+1. ¿Qué contenidos son producción propia de DUA-DIG, aportaciones de EduDIG, selección de terceros o antecedentes?
+2. ¿Cuál es el público y alcance vigente: Infantil, Primaria y competencia digital en todos los materiales o solo en parte?
+3. ¿Quién valida etapa, objetivos, instrucciones y alternativas de participación de cada ficha?
+4. ¿Qué versión de las directrices DUA y qué marco de competencia digital se utilizan para describir recursos?
+5. ¿Qué materiales tienen evaluación publicada y qué conclusiones concretas permite cada estudio?
+6. ¿Qué créditos, financiación, referencias, logotipos y textos son obligatorios?
+7. ¿Se autoriza el piloto de tres fichas y quién aprueba antes de publicar?
+8. ¿Qué expectativas de gestión web corresponden al puesto y cuáles requieren apoyo especializado?
+9. ¿Quién mantendrá contenidos, proveedores y enlaces después del proyecto?
+Para gestión web y personal técnico
+10. ¿Cuál es el menú real, qué páginas son principales y qué relación hay entre / e /inicio/?
+11. ¿Qué buscador y filtros existen? ¿Qué consultan, qué campos indexan y cómo funcionan con teclado y móvil?
+12. ¿Cuáles son los enlaces de las tres entradas de herramientas DUA y el inventario de herramientas?
+13. ¿Qué gestor, versión, plantilla y componentes se usan según el inventario técnico? ¿Qué permisos tendría la persona de apoyo?
+14. ¿Qué formatos contienen las fichas y dónde están originales, incrustaciones y archivos finales?
+15. ¿Existe entorno de pruebas, copia restaurable, historial editorial y procedimiento de reversión?
+16. ¿Qué idiomas están activos y cómo funcionan selector, enlaces entre versiones e indexación?
+17. ¿Hay evaluación previa de accesibilidad, declaración vigente o canal para notificar barreras?
+18. ¿Qué proveedores requieren cuentas, cookies, incrustaciones o datos personales del alumnado?
+19. ¿Qué analítica está autorizada y qué datos recoge? ¿Puede responder tareas sin aumentar seguimiento?
+20. ¿Qué componentes pueden ajustarse sin instalar extensiones ni alterar infraestructura?
+Para autoría, docentes colaboradores y responsables de derechos
+21. ¿Qué debe preparar un docente para cada material y qué cambia según grupo o dispositivo?
+22. ¿Qué alternativas están realmente disponibles para ver, oír, leer, responder y participar?
+23. ¿Quién posee derechos de textos, imágenes, vídeos y plantillas? ¿Qué licencia cubre cada pieza?
+24. ¿Qué títulos, instrucciones o temas resultan difíciles de interpretar a docentes que no conocen el proyecto?
+25. ¿Cómo guardan y recuperan hoy los materiales y qué problema resolvería una colección nueva?
+26. ¿Qué consultas, errores de uso o incidencias llegan al equipo y cómo se documentan?
+Resultado esperado de estas respuestas: convertir las hipótesis de este documento en un encargo acotado, con responsables, fuentes, permisos y pruebas. Modernizar no exige empezar cambiando la plantilla; exige que un docente pueda encontrar un material, entenderlo y utilizarlo con información suficiente y límites claros.
